@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // 1️⃣ Configuration d'une instance Axios avec l'URL de base
 const api = axios.create({
-  baseURL: 'http://localhost:3000/api', // Adapter selon la config serveur
+  baseURL: 'https://school-school-backend.onrender.com', // Adapter selon la config serveur
   headers: {
     'Content-Type': 'application/json'
   },
