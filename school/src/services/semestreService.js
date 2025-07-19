@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:3000/api/semestres";
+const API = "https://school-school-backend.onrender.com";
 
 export const getSemestres = () => axios.get(API);
 export const getSemestreById = (id) => axios.get(`${API}/${id}`);
