@@ -16,7 +16,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:3000/api/auth/login', form);
+      const response = await axios.post('https://school-school-backend.onrender.com', form);
       const { user, token } = response.data;
 
       localStorage.setItem("user", JSON.stringify(user));
