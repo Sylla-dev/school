@@ -10,7 +10,7 @@ export default function AssignSubjectsToTeacher() {
   const [message, setMessage] = useState({ text: '', type: '' }); // {text: '', type: 'success'|'error'}
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/enseignants')
+    axios.get('https://school-school-backend.onrender.com/enseignants')
       .then(res => setTeachers(res.data))
       .catch(() => setMessage({ text: "Erreur lors du chargement des enseignants.", type: "error" }));
 
@@ -28,7 +28,7 @@ export default function AssignSubjectsToTeacher() {
     }
 
     try {
-      await axios.post('http://localhost:3000/api/enseignant-matieres/assign', {
+      await axios.post('https://school-school-backend.onrender.com/enseignant-matieres/assign', {
         enseignant_id: selectedTeacher,
         matiere_ids: selectedSubjects,
       });
