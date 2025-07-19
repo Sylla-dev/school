@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/api/matieres";
+const API_URL = "https://school-school-backend.onrender.com";
 
 export const getMatieres = () => axios.get(API_URL);
 export const getMatiereById = (id) => axios.get(`${API_URL}/${id}`);
