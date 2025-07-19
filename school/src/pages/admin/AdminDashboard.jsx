@@ -23,7 +23,7 @@ export default function AdminDashboard() {
     const fetchStats = async () => {
       try {
         setLoading(true);
-        const res = await axios.get('http://localhost:3000/api/dashboard/stats');
+        const res = await axios.get('https://school-school-backend.onrender.com/dashboard/stats');
         setStats(res.data);
         setError(null);
       } catch (err) {
