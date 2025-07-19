@@ -14,7 +14,7 @@ export default function PresenceForm() {
   useEffect(() => {
     const fetchPresences = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/api/presences/${coursId}`);
+        const res = await axios.get(`https://school-school-backend.onrender.com/presences/${coursId}`);
         const data = res.data;
         const formatted = {};
 
@@ -54,7 +54,7 @@ export default function PresenceForm() {
     const allPresences = Object.values(groupedEleves).flat();
 
     try {
-      await axios.post(`http://localhost:3000/api/presences/${coursId}`, {
+      await axios.post(`https://school-school-backend.onrender.com/presences/${coursId}`, {
         presences: allPresences,
       });
       alert('✅ Présences enregistrées avec succès.');
