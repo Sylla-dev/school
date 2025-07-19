@@ -8,7 +8,7 @@ export default function BulletinEleve() {
   const [bulletin, setBulletin] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/eleves')
+    axios.get('https://school-school-backend.onrender.com/eleves')
       .then(res => {
         setEleves(res.data);
       })
@@ -17,7 +17,7 @@ export default function BulletinEleve() {
 
   useEffect(() => {
     if (selectedId) {
-      axios.get(`http://localhost:3000/api/bulletins/${selectedId}`)
+      axios.get(`https://school-school-backend.onrender.com/bulletins/${selectedId}`)
         .then(res => setBulletin(res.data))
         .catch(err => console.error(err));
     } else {
