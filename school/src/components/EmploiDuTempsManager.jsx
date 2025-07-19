@@ -26,7 +26,7 @@ export default function EmploiDuTempsManager() {
   // Chargement des classes
   useEffect(() => {
     setLoading(true);
-    axios.get("http://localhost:3000/api/classes")
+    axios.get("https://school-school-backend.onrender.com/classes")
       .then(res => {
         const grouped = res.data.reduce((acc, classe) => {
           if (!acc[classe.niveau]) acc[classe.niveau] = [];
@@ -54,7 +54,7 @@ export default function EmploiDuTempsManager() {
     }
     setLoading(true);
     setError('');
-    axios.get(`http://localhost:3000/api/emplois/classe/${selectedClassId}`)
+    axios.get(`https://school-school-backend.onrender.com/emplois/classe/${selectedClassId}`)
       .then(res => setCourses(res.data))
       .catch(() => setError("Erreur lors du chargement des cours."))
       .finally(() => setLoading(false));
