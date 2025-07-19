@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/api/cours";
+const API_URL = "https://school-school-backend.onrender.com";
 
 export const getCoursGrouped = () => {
   return axios.get('API_URL/grouped-by-niveau');
