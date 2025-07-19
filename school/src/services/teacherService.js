@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/api/enseignants";
+const API_URL = "https://school-school-backend.onrender.com";
 
 // 🔹 Liste des enseignants groupés par spécialité
 export const getTeachers = (spécialité) => axios.get(API_URL, spécialité);
