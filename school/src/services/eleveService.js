@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:3000/api/eleves";
+const API = "https://school-school-backend.onrender.com";
 
 export const getEleves = () => axios.get(API);
 
